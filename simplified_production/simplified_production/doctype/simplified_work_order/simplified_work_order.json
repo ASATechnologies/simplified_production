@@ -1,0 +1,148 @@
+{
+ "autoname": "format:SWO-{YYYY}-{#####}",
+ "creation": "2021-01-28 15:45:28.285027",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "posting_date",
+  "column_break_2",
+  "company",
+  "section_break_4",
+  "starting_date",
+  "column_break_6",
+  "end_date",
+  "section_break_8",
+  "consumed_by_manufacturing",
+  "total_qty_consumed",
+  "total_incoming_value",
+  "section_break_12",
+  "produced_from_manufacturing",
+  "total_qty_produced",
+  "total_outgoing_value",
+  "section_break_16",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "remember_last_selected_value": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "starting_date",
+   "fieldtype": "Date",
+   "label": "Starting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "consumed_by_manufacturing",
+   "fieldtype": "Table",
+   "label": "Consumed by Manufacturing",
+   "options": "Simplified Work Order Input Material",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_qty_consumed",
+   "fieldtype": "Int",
+   "label": "Total Qty Consumed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "produced_from_manufacturing",
+   "fieldtype": "Table",
+   "label": "Produced from Manufacturing",
+   "options": "Simplified Work Order Output Material",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_qty_produced",
+   "fieldtype": "Int",
+   "label": "Total Qty Produced",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Simplified Work Order",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_incoming_value",
+   "fieldtype": "Int",
+   "label": "Total Incoming Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_outgoing_value",
+   "fieldtype": "Int",
+   "label": "Total Outgoing Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-01-30 12:23:48.924445",
+ "modified_by": "Administrator",
+ "module": "Simplified Production",
+ "name": "Simplified Work Order",
+ "owner": "administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}
