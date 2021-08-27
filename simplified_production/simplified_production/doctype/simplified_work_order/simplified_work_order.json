@@ -113,7 +113,7 @@
   {
    "fieldname": "total_outgoing_value",
    "fieldtype": "Int",
-   "label": "Total Outgoing Value",
+   "label": "Presumed Total Outgoing Value",
    "read_only": 1
   },
   {
