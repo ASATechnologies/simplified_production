@@ -59,7 +59,7 @@ class SimplifiedWorkOrder(Document):
                 "qty": row.qty,
                 "basic_rate": row.valuation
             })
-
+        doc.insert()
         doc.save()
         doc.submit()
         frappe.msgprint(f'Stock Entry: {doc.name} created')
