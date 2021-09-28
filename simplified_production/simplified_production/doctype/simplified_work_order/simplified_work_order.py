@@ -19,6 +19,7 @@ class SimplifiedWorkOrder(Document):
         doc.stock_entry_type = "Manufacture"
         doc.set_posting_time = 1
         doc.posting_date = self.posting_date
+        doc.company = self.company
         doc.simplified_work_order = self.name
 
         for row in self.consumed_by_manufacturing:
