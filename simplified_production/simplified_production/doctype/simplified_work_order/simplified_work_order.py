@@ -50,7 +50,8 @@ class SimplifiedWorkOrder(Document):
                 "item_code": row.item_code,
                 "s_warehouse": row.source_warehouse,
                 "qty": row.qty,
-                'basic_rate': row.cost
+                'basic_rate': row.cost,
+                "cost_center": row.cost_center
             })
 
         for row in self.produced_from_manufacturing:
@@ -58,7 +59,9 @@ class SimplifiedWorkOrder(Document):
                 "item_code": row.item_code,
                 "t_warehouse": row.target_warehouse,
                 "qty": row.qty,
-                "basic_rate": row.valuation
+                "basic_rate": row.valuation,
+                "cost_center": row.cost_center
+
             })
         doc.insert()
         doc.save()
