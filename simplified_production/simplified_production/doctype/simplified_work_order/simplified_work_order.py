@@ -22,28 +22,28 @@ class SimplifiedWorkOrder(Document):
         doc.company = self.company
         doc.simplified_work_order = self.name
 
-        for row in self.consumed_by_manufacturing:
-            valuation_rate = 0
-            stock_item = frappe.db.get_list("Bin",
-                                            {
-                                                "item_code": row.item_code,
-                                                "warehouse": row.source_warehouse
-                                            },
-                                            ["valuation_rate"])
+        # for row in self.consumed_by_manufacturing:
+        #     valuation_rate = 0
+        #     stock_item = frappe.db.get_list("Bin",
+        #                                     {
+        #                                         "item_code": row.item_code,
+        #                                         "warehouse": row.source_warehouse
+        #                                     },
+        #                                     ["valuation_rate"])
            
-            for item in stock_item:
-                valuation_rate = item.valuation_rate
+        #     for item in stock_item:
+        #         valuation_rate = item.valuation_rate
 
-            if valuation_rate != row.cost:
-                items_have_changed_cost.add(row.item_code)
+        #     if valuation_rate != row.cost:
+        #         items_have_changed_cost.add(row.item_code)
 
-        if len(items_have_changed_cost):
-            changed_items = "<br>"
-            for item in items_have_changed_cost:
-                changed_items += item + "<br>"
+        # # if len(items_have_changed_cost):
+        # #     changed_items = "<br>"
+        # #     for item in items_have_changed_cost:
+        # #         changed_items += item + "<br>"
 
-            frappe.throw(
-                f"Following items cost was changed after you create this work order {changed_items}")
+        # #     frappe.msgprint(
+        # #         f"Following items cost was changed after you create this work order {changed_items}", "Changed Cost of Manufacturing Material")
 
         for row in self.consumed_by_manufacturing:
             doc.append('items', {
