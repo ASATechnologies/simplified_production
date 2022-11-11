@@ -60,7 +60,10 @@ class SimplifiedWorkOrder(Document):
                 "t_warehouse": row.target_warehouse,
                 "qty": row.qty,
                 "basic_rate": row.valuation,
-                "cost_center": row.cost_center
+                "cost_center": row.cost_center,
+                "is_process_loss": row.is_process_loss,
+                "is_finished_item": row.is_finished_item,
+                "is_scrap_item": row.is_scrap_item
 
             })
         doc.insert()
